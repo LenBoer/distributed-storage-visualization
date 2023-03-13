@@ -1,0 +1,68 @@
+[
+    {
+        "filename": "pfl_test",
+        "lcm_layout_gen": "3",
+        "lcm_mirror_count": "1",
+        "lcm_entry_count": "2"
+    },
+    {
+        "lcme_id": "1",
+        "lcme_mirror_id": "0",
+        "lcme_flags": "init",
+        "lcme_extent.e_start": "0",
+        "lcme_extent.e_end": "65536",
+        "lmm_stripe_count": "4",
+        "lmm_stripe_size": "65536",
+        "lmm_pattern": "raid0",
+        "lmm_layout_gen": "0",
+        "lmm_stripe_offset": "1",
+        "osts": [
+            {
+                "l_ost_idx": "1",
+                "l_fid": "0x100010000:0x39e20ca:0x0"
+            },
+            {
+                "l_ost_idx": "2",
+                "l_fid": "0x100020000:0x39a7d94:0x0"
+            },
+            {
+                "l_ost_idx": "3",
+                "l_fid": "0x100030000:0x3a56f0e:0x0"
+            },
+            {
+                "l_ost_idx": "0",
+                "l_fid": "0x100000000:0x39df9ac:0x0"
+            }
+        ]
+    },
+    {
+        "lcme_id": "2",
+        "lcme_mirror_id": "0",
+        "lcme_flags": "init",
+        "lcme_extent.e_start": "65536",
+        "lcme_extent.e_end": "EOF",
+        "lmm_stripe_count": "4",
+        "lmm_stripe_size": "1048576",
+        "lmm_pattern": "raid0",
+        "lmm_layout_gen": "0",
+        "lmm_stripe_offset": "1",
+        "osts": [
+            {
+                "l_ost_idx": "1",
+                "l_fid": "0x100010000:0x39e20d8:0x0"
+            },
+            {
+                "l_ost_idx": "2",
+                "l_fid": "0x100020000:0x39a7da2:0x0"
+            },
+            {
+                "l_ost_idx": "3",
+                "l_fid": "0x100030000:0x3a56f1c:0x0"
+            },
+            {
+                "l_ost_idx": "0",
+                "l_fid": "0x100000000:0x39df9b8:0x0"
+            }
+        ]
+    }
+]
