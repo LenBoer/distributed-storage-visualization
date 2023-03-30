@@ -1,0 +1,12 @@
+replicated_rule
+fin-backups-ec
+ssd
+room-035
+room-328
+ssd-only
+ssd-2xhdd
+nvme-only
+nvme-2xssd
+hdd-only
+2xssd-hdd
+ceph-fin-data-ec
