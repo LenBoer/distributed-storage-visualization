@@ -1,0 +1,298 @@
+[
+    {
+        "rule_id": 0,
+        "rule_name": "replicated_rule",
+        "type": 1,
+        "steps": [
+            {
+                "op": "take",
+                "item": -1,
+                "item_name": "default"
+            },
+            {
+                "op": "chooseleaf_firstn",
+                "num": 0,
+                "type": "host"
+            },
+            {
+                "op": "emit"
+            }
+        ]
+    },
+    {
+        "rule_id": 1,
+        "rule_name": "fin-backups-ec",
+        "type": 3,
+        "steps": [
+            {
+                "op": "set_chooseleaf_tries",
+                "num": 5
+            },
+            {
+                "op": "set_choose_tries",
+                "num": 100
+            },
+            {
+                "op": "take",
+                "item": -68,
+                "item_name": "default~nvme"
+            },
+            {
+                "op": "chooseleaf_indep",
+                "num": 0,
+                "type": "osd"
+            },
+            {
+                "op": "emit"
+            }
+        ]
+    },
+    {
+        "rule_id": 2,
+        "rule_name": "ssd",
+        "type": 1,
+        "steps": [
+            {
+                "op": "take",
+                "item": -2,
+                "item_name": "default~ssd"
+            },
+            {
+                "op": "chooseleaf_firstn",
+                "num": 0,
+                "type": "host"
+            },
+            {
+                "op": "emit"
+            }
+        ]
+    },
+    {
+        "rule_id": 3,
+        "rule_name": "room-035",
+        "type": 1,
+        "steps": [
+            {
+                "op": "take",
+                "item": -20,
+                "item_name": "035"
+            },
+            {
+                "op": "chooseleaf_firstn",
+                "num": 0,
+                "type": "host"
+            },
+            {
+                "op": "emit"
+            }
+        ]
+    },
+    {
+        "rule_id": 4,
+        "rule_name": "room-328",
+        "type": 1,
+        "steps": [
+            {
+                "op": "take",
+                "item": -23,
+                "item_name": "328~ssd"
+            },
+            {
+                "op": "chooseleaf_firstn",
+                "num": 0,
+                "type": "host"
+            },
+            {
+                "op": "emit"
+            }
+        ]
+    },
+    {
+        "rule_id": 5,
+        "rule_name": "ssd-only",
+        "type": 1,
+        "steps": [
+            {
+                "op": "take",
+                "item": -2,
+                "item_name": "default~ssd"
+            },
+            {
+                "op": "chooseleaf_firstn",
+                "num": 0,
+                "type": "host"
+            },
+            {
+                "op": "emit"
+            }
+        ]
+    },
+    {
+        "rule_id": 6,
+        "rule_name": "ssd-2xhdd",
+        "type": 1,
+        "steps": [
+            {
+                "op": "take",
+                "item": -2,
+                "item_name": "default~ssd"
+            },
+            {
+                "op": "chooseleaf_firstn",
+                "num": 1,
+                "type": "host"
+            },
+            {
+                "op": "emit"
+            },
+            {
+                "op": "take",
+                "item": -39,
+                "item_name": "default~hdd"
+            },
+            {
+                "op": "chooseleaf_firstn",
+                "num": -1,
+                "type": "host"
+            },
+            {
+                "op": "emit"
+            }
+        ]
+    },
+    {
+        "rule_id": 7,
+        "rule_name": "nvme-only",
+        "type": 1,
+        "steps": [
+            {
+                "op": "take",
+                "item": -68,
+                "item_name": "default~nvme"
+            },
+            {
+                "op": "chooseleaf_firstn",
+                "num": 0,
+                "type": "host"
+            },
+            {
+                "op": "emit"
+            }
+        ]
+    },
+    {
+        "rule_id": 8,
+        "rule_name": "nvme-2xssd",
+        "type": 1,
+        "steps": [
+            {
+                "op": "take",
+                "item": -68,
+                "item_name": "default~nvme"
+            },
+            {
+                "op": "chooseleaf_firstn",
+                "num": 1,
+                "type": "host"
+            },
+            {
+                "op": "emit"
+            },
+            {
+                "op": "take",
+                "item": -2,
+                "item_name": "default~ssd"
+            },
+            {
+                "op": "chooseleaf_firstn",
+                "num": -1,
+                "type": "host"
+            },
+            {
+                "op": "emit"
+            }
+        ]
+    },
+    {
+        "rule_id": 9,
+        "rule_name": "hdd-only",
+        "type": 1,
+        "steps": [
+            {
+                "op": "take",
+                "item": -39,
+                "item_name": "default~hdd"
+            },
+            {
+                "op": "chooseleaf_firstn",
+                "num": 0,
+                "type": "host"
+            },
+            {
+                "op": "emit"
+            }
+        ]
+    },
+    {
+        "rule_id": 10,
+        "rule_name": "2xssd-hdd",
+        "type": 1,
+        "steps": [
+            {
+                "op": "take",
+                "item": -2,
+                "item_name": "default~ssd"
+            },
+            {
+                "op": "chooseleaf_firstn",
+                "num": 2,
+                "type": "host"
+            },
+            {
+                "op": "emit"
+            },
+            {
+                "op": "take",
+                "item": -39,
+                "item_name": "default~hdd"
+            },
+            {
+                "op": "chooseleaf_firstn",
+                "num": -2,
+                "type": "host"
+            },
+            {
+                "op": "emit"
+            }
+        ]
+    },
+    {
+        "rule_id": 11,
+        "rule_name": "ceph-fin-data-ec",
+        "type": 3,
+        "steps": [
+            {
+                "op": "set_chooseleaf_tries",
+                "num": 5
+            },
+            {
+                "op": "set_choose_tries",
+                "num": 100
+            },
+            {
+                "op": "take",
+                "item": -68,
+                "item_name": "default~nvme"
+            },
+            {
+                "op": "chooseleaf_indep",
+                "num": 0,
+                "type": "osd"
+            },
+            {
+                "op": "emit"
+            }
+        ]
+    }
+]
+

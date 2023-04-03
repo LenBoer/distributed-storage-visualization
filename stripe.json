@@ -1,0 +1,27 @@
+[
+    {
+        "filename": "HRR",
+        "lmm_stripe_count": "3",
+        "lmm_stripe_size": "1048576",
+        "lmm_pattern": "raid0",
+        "lmm_layout_gen": "0",
+        "lmm_stripe_offset": "3",
+        "osts": [
+            {
+                "obdidx": "3",
+                "objid": "435568180",
+                "group": "0x2c0000401"
+            },
+            {
+                "obdidx": "0",
+                "objid": "435426040",
+                "group": "0x280000401"
+            },
+            {
+                "obdidx": "1",
+                "objid": "425025780",
+                "group": "0x240000400"
+            }
+        ]
+    }
+]
